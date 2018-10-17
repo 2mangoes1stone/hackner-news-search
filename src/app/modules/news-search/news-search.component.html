@@ -1,0 +1,14 @@
+
+<div class="search-page">
+
+    <input type="text" placeholder="begin" (input)="getArticles($event)">
+
+    <div class="search-results-container">
+      <a class="search-result-link" target="_blank" *ngFor="let article of articles" [attr.href]="article?.url" [@easeInOut]>
+        <span>{{article?.title}}</span>
+      </a>
+    </div>
+
+    <button class="primary-btn" *ngIf="showButton()" (click)="getMoreArticles()" [@easeInOut]>load more</button>
+</div>
+
