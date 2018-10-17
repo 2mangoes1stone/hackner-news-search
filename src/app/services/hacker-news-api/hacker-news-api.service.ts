@@ -15,7 +15,6 @@ export class HackerNewsApiService {
   ) { }
 
   public getArticles(keyword): Observable<HackerNewsArticles> {
-    console.log('keyword', keyword);
     this.keyword = keyword;
     this.baseUrl = `${environment.hackerNewsApi}/search?query=${this.keyword}&tags=story`;
 
